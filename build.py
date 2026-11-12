@@ -60,6 +60,16 @@ def as_date(v):
     return dt.date.fromisoformat(str(v))
 
 
+ROMAN = {1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII"}
+
+
+SOCIAL_ICONS = {
+    "TikTok": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3c.4 2.2 1.8 3.7 4 3.9v3.2c-1.5 0-2.8-.4-4-1.2v6.1c0 3.4-2.7 6-6.1 6S4.4 18.4 4.4 15s2.7-6 6.1-6c.3 0 .6 0 .9.1v3.3a2.9 2.9 0 1 0 2 2.7V3h3.2z" fill="currentColor"/></svg>',
+    "YouTube": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1.1 8.9 1.1 12 1.1 12s0 3.1.4 4.8a2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8zM9.8 15.1V8.9l5.6 3.1-5.6 3.1z" fill="currentColor"/></svg>',
+    "Facebook": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.9v-7.6h2.6l.4-3h-3V9.4c0-.9.3-1.5 1.5-1.5h1.6V5.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6v7.6h3.1z" fill="currentColor"/></svg>',
+}
+
+
 class Site:
     def __init__(self):
         self.cfg = yaml.safe_load((CONTENT / "site.yml").read_text())
@@ -86,6 +96,14 @@ class Site:
         self.pages = [read_md(p) | {"slug": p.stem} for p in (CONTENT / "pages").glob("*.md")]
         self.sitemap = []
 
+    def socials_html(self, cls):
+        links = "".join(
+            f'<a href="{esc(s["url"])}" rel="me noopener" target="_blank" aria-label="9nth Dimension on {esc(s["name"])}">'
+            f'{SOCIAL_ICONS.get(s["name"], "")}<span>{esc(s["name"])}</span></a>'
+            for s in self.cfg.get("socials", [])
+        )
+        return f'<nav class="{cls}" aria-label="9nth Dimension on social media">{links}</nav>' if links else ""
+
     # ---------- urls ----------
     def href(self, path):
         return f"{self.base}{path}"
@@ -104,7 +122,7 @@ class Site:
         name = self.cfg["name"]
         full_title = title if title == name else f"{title} | {name}"
         nav = "".join(
-            f'<a href="{self.href(self.rung_path(r))}">{r["number"]}. {esc(r["short"])}</a>'
+            f'<a href="{self.href(self.rung_path(r))}">{ROMAN[r["number"]]}. {esc(r["short"])}</a>'
             for r in self.rungs
         )
         modified = f'<meta property="article:modified_time" content="{updated}">' if updated else ""
@@ -140,7 +158,7 @@ class Site:
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{self.href('/')}" aria-label="9nth Dimension home">{SEAL_SVG}<span class="brand-words"><span class="wordmark">9NTHDIMENSION</span><span class="tagline">ANCIENT TEXTS UNSEALED</span></span></a>
-    <nav class="top-nav"><a href="{self.href('/ladder/')}">The Ladder</a><a href="{self.href('/articles/')}">Articles</a><a href="{self.href('/about/')}">About</a></nav>
+    <div class="header-right"><nav class="top-nav"><a href="{self.href('/ladder/')}">The Ladder</a><a href="{self.href('/articles/')}">Articles</a><a href="{self.href('/about/')}">About</a></nav>{self.socials_html('social-icons')}</div>
   </div>
 </header>
 <main class="wrap">
@@ -148,6 +166,8 @@ class Site:
 </main>
 <footer class="site-footer">
   <div class="wrap">
+    <p class="footer-title">Watch the daily videos</p>
+    {self.socials_html('social-links')}
     <p class="footer-title">The Spiritual Ladder</p>
     <nav class="rung-nav">{nav}</nav>
     <p class="small">&copy; {self.today.year} 9nth Dimension. Written and reviewed by the 9nth Dimension team.</p>
@@ -165,8 +185,9 @@ class Site:
             "url": self.abs("/"),
             "description": self.cfg["description"],
         }
-        if self.cfg.get("same_as"):
-            o["sameAs"] = self.cfg["same_as"]
+        same = [s["url"] for s in self.cfg.get("socials", [])] + list(self.cfg.get("same_as") or [])
+        if same:
+            o["sameAs"] = same
         return o
 
     def breadcrumbs(self, items):
@@ -196,37 +217,42 @@ class Site:
     def article_card(self, a):
         r = self.rung_by_slug[a["rung"]]
         return (
-            f'<li class="card"><a href="{self.href(self.article_path(a))}">'
-            f'<span class="card-rung">Rung {r["number"]} · {esc(r["short"])}</span>'
-            f'<span class="card-title">{esc(a["title"])}</span>'
-            f'<span class="card-desc">{esc(a["description"])}</span></a></li>'
+            f'<li class="entry"><a href="{self.href(self.article_path(a))}">'
+            f'<span class="entry-title">{esc(a["title"])}</span>'
+            f'<span class="entry-desc">{esc(a["description"])}</span>'
+            f'<span class="entry-meta">{esc(r["short"])}, rung {ROMAN[r["number"]]}</span></a></li>'
         )
+
+    def ladder_html(self):
+        rows = "".join(
+            f'<li class="rung"><a href="{self.href(self.rung_path(r))}">'
+            f'<span class="rung-seal" aria-hidden="true">{ROMAN[r["number"]]}</span>'
+            f'<span class="rung-text"><span class="rung-name">{esc(r["short"])}</span>'
+            f'<span class="rung-line">{esc(r["tagline"])}</span></span></a></li>'
+            for r in reversed(self.rungs)
+        )
+        return f'<ol class="ladder" reversed>{rows}</ol>'
 
     # ---------- pages ----------
     def build_home(self):
-        ladder = "".join(
-            f'<li class="rung-row"><a href="{self.href(self.rung_path(r))}">'
-            f'<span class="rung-num">{r["number"]}</span>'
-            f'<span><strong>{esc(r["short"])}</strong><br><span class="muted">{esc(r["tagline"])}</span></span></a></li>'
-            for r in reversed(self.rungs)
-        )
-        latest = "".join(self.article_card(a) for a in self.articles[:6]) or "<li class='muted'>New articles arrive every other day.</li>"
+        ladder = self.ladder_html()
+        latest = "".join(self.article_card(a) for a in self.articles[:6]) or "<li class='empty'>New articles arrive every other day.</li>"
         body = f"""
 <section class="hero">
-  <p class="eyebrow">Ancient texts unsealed</p>
-  <h1>What Sunday school <em>skipped</em></h1>
+  
+  <h1>What Sunday school skipped</h1>
   <p class="lede">{esc(self.cfg['description'])}</p>
   <a class="button" href="{self.href('/articles/')}">Start reading</a>
-  <p class="hero-sub"><a href="{self.href('/ladder/')}">Or find your rung on the Spiritual Ladder &rarr;</a></p>
+  <p class="hero-sub"><a href="{self.href('/ladder/')}">Or find your place on the Spiritual Ladder</a></p>
 </section>
 <section>
   <h2>Latest unsealed</h2>
-  <ul class="cards">{latest}</ul>
+  <ul class="index">{latest}</ul>
 </section>
 <section>
   <h2>The Spiritual Ladder</h2>
-  <p class="muted">Six stages of growth. Every article sits on the rung it helps you climb.</p>
-  <ol class="ladder">{ladder}</ol>
+  <p class="section-note">Six stages of growth. Every article sits on the rung it helps you climb.</p>
+  {ladder}
 </section>"""
         site_ld = {
             "@context": "https://schema.org",
@@ -249,19 +275,19 @@ class Site:
         if next_r:
             nav += f'<a class="step next" href="{self.href(self.rung_path(next_r))}">Rung {next_r["number"]}: {esc(next_r["short"])} &rarr;</a>'
         crumbs = [("Home", "/"), ("The Ladder", "/ladder/"), (f"Rung {r['number']}: {r['short']}", self.rung_path(r))]
-        listing = "".join(self.article_card(a) for a in arts) or "<li class='muted'>Articles for this rung are on the way.</li>"
+        listing = "".join(self.article_card(a) for a in arts) or "<li class='empty'>Articles for this rung are on the way.</li>"
         updated = max([a["updated"] for a in arts] + [as_date(r.get("updated", r["date"]))])
         body = f"""
 {self.crumbs_html(crumbs)}
 <article class="prose">
-  <p class="eyebrow">Rung {r['number']} of {len(self.rungs)}</p>
+  <p class="kicker">Rung {ROMAN[r['number']]} of the Spiritual Ladder</p>
   <h1>{esc(r['title'])}</h1>
   <p class="updated">Last updated {updated:%B %-d, %Y}</p>
   {md_to_html(r['body_md'])}
 </article>
 <section>
   <h2>Questions on this rung</h2>
-  <ul class="cards">{listing}</ul>
+  <ul class="index">{listing}</ul>
 </section>
 <nav class="steps">{nav}</nav>"""
         ld = [self.breadcrumbs(crumbs), {
@@ -288,15 +314,15 @@ class Site:
         related = [x for x in self.articles if x["rung"] == a["rung"] and x is not a][:3]
         related_html = ""
         if related:
-            related_html = f'<section><h2>More on this rung</h2><ul class="cards">{"".join(self.article_card(x) for x in related)}</ul></section>'
+            related_html = f'<section><h2>More on this rung</h2><ul class="index">{"".join(self.article_card(x) for x in related)}</ul></section>'
         up = ""
         if next_r:
-            up = (f'<aside class="next-step"><p class="eyebrow">Your next step up</p>'
-                  f'<a href="{self.href(self.rung_path(next_r))}">Rung {next_r["number"]}: {esc(next_r["title"])} &rarr;</a></aside>')
+            up = (f'<aside class="next-step"><p class="kicker">Your next step up</p>'
+                  f'<a href="{self.href(self.rung_path(next_r))}">{esc(next_r["title"])}</a></aside>')
         body = f"""
 {self.crumbs_html(crumbs)}
 <article class="prose">
-  <p class="eyebrow">Rung {r['number']} · {esc(r['short'])}</p>
+  <p class="kicker"><a href="{self.href(self.rung_path(r))}">{esc(r['short'])}, rung {ROMAN[r['number']]}</a></p>
   <h1>{esc(a['title'])}</h1>
   <p class="updated">By the 9nth Dimension team · Published {a['date']:%B %-d, %Y} · Last updated {a['updated']:%B %-d, %Y}</p>
   {md_to_html(a['body_md'])}
@@ -328,10 +354,7 @@ class Site:
             crumbs = [("Home", "/"), (p["title"], path)]
             extra = ""
             if p["slug"] == "ladder":
-                extra = '<ol class="ladder">' + "".join(
-                    f'<li class="rung-row"><a href="{self.href(self.rung_path(r))}"><span class="rung-num">{r["number"]}</span>'
-                    f'<span><strong>{esc(r["short"])}</strong><br><span class="muted">{esc(r["tagline"])}</span></span></a></li>'
-                    for r in reversed(self.rungs)) + "</ol>"
+                extra = self.ladder_html()
             updated = as_date(p.get("updated", p.get("date", self.today)))
             body = f"""
 {self.crumbs_html(crumbs)}
@@ -345,12 +368,12 @@ class Site:
                        body=body, jsonld=[self.breadcrumbs(crumbs), self.org_ld()]), lastmod=updated)
 
     def build_index(self):
-        cards = "".join(self.article_card(a) for a in self.articles) or "<li class='muted'>New articles arrive every other day.</li>"
+        cards = "".join(self.article_card(a) for a in self.articles) or "<li class='empty'>New articles arrive every other day.</li>"
         body = f"""
 {self.crumbs_html([("Home", "/"), ("Articles", "/articles/")])}
 <h1>All articles</h1>
 <p class="lede">Every article answers one real question from someone climbing the Spiritual Ladder.</p>
-<ul class="cards">{cards}</ul>"""
+<ul class="index">{cards}</ul>"""
         self.write("/articles/", self.layout(title="All articles", description="Every 9nth Dimension article, newest first.",
                    path="/articles/", body=body, jsonld=[self.org_ld()]))
 
