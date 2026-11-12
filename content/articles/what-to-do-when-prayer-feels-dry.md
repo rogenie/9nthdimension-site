@@ -2,6 +2,7 @@
 title: What to do when prayer feels dry
 rung: healing
 date: 2026-11-11
+updated: 2026-11-11
 description: "Dry prayer is a normal stage of spiritual growth, not proof that God is gone. Here's why it happens and five practical ways to keep praying through it."
 faq:
   - q: Does dry prayer mean God has left me?
@@ -23,6 +24,22 @@ Early in a spiritual journey, prayer often comes with warm feelings. Over time t
 - **You are tired or stretched thin.** Stress, grief and poor sleep flatten every kind of feeling, including spiritual ones.
 - **Something unspoken is in the way.** A resentment, disappointment or question you have not said out loud can make prayer feel like small talk.
 - **Your routine has gone stale.** Praying the same words in the same way for months can turn into recitation.
+
+## Does the Bible talk about seasons when God feels silent?
+
+Yes, often and honestly. Scripture does not pretend that faithful people always feel close to God.
+
+- **Psalm 22** opens with the cry "My God, my God, why have you forsaken me?" and goes on to describe calling out by day and night without an answer (Psalm 22:1–2). Jesus prayed its first line from the cross (Matthew 27:46).
+- **Psalm 42** compares the soul to a deer thirsting for water, and twice the writer asks his own soul why it is so downcast, then tells himself to put his hope in God (Psalm 42:1, 5, 11).
+- **Elijah** expected to meet God in wind, earthquake and fire, but God came in a quiet whisper instead (1 Kings 19:11–12).
+
+These passages show two things. Feeling far from God is part of real faith, not a failure of it. And the people who wrote them kept speaking to God while they felt that way.
+
+## Is it spiritual dryness or something more?
+
+Spiritual dryness usually affects prayer and worship while the rest of life carries on reasonably well. You still enjoy food, friends and work; prayer just feels flat.
+
+If the flatness has spread everywhere, with low mood most days, trouble sleeping, losing interest in things you used to enjoy, or feeling hopeless, it may be depression rather than, or as well as, a spiritual season. That deserves real care. Please talk to a doctor or licensed counsellor, and to a pastor you trust. Getting help is not a lack of faith; it is one of the ways God cares for you.
 
 ## Five ways to keep praying through a dry season
 
