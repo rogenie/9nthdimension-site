@@ -40,4 +40,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://rogenie.github.io/9nthdimension-site/sitemap.xml
+Sitemap: https://9nthdimension.com/sitemap.xml
