@@ -1,0 +1,43 @@
+# Article queue. The scheduled task takes the first entry with status: todo,
+# writes it, then sets status: published and adds the slug.
+# Add new questions anywhere; real questions from comments go near the top.
+- {q: "What are the signs of a spiritual awakening?", rung: awakening, status: todo}
+- {q: "How do I start praying if I've never prayed before?", rung: awakening, status: todo}
+- {q: "Bible verses for when you feel far from God", rung: healing, status: todo}
+- {q: "How to build a daily prayer habit that lasts", rung: foundations, status: todo}
+- {q: "How to find inner peace when life feels chaotic", rung: abiding, status: todo}
+- {q: "Bible verses for strength and courage in hard times", rung: practice, status: todo}
+- {q: "What does the Bible say about forgiveness?", rung: healing, status: todo}
+- {q: "How do I know what my purpose is?", rung: purpose, status: todo}
+- {q: "What is a gratitude practice and how do I start one?", rung: foundations, status: todo}
+- {q: "How to be still and hear God", rung: foundations, status: todo}
+- {q: "Why do I feel empty even when life is good?", rung: awakening, status: todo}
+- {q: "How to forgive someone who isn't sorry", rung: healing, status: todo}
+- {q: "What is spiritual discernment and how do I grow in it?", rung: healing, status: todo}
+- {q: "Prayers for anxiety and worry", rung: foundations, status: todo}
+- {q: "How to stay consistent in your faith when you're busy", rung: practice, status: todo}
+- {q: "What is fasting and how do I start?", rung: practice, status: todo}
+- {q: "How do I know if a thought is from God?", rung: healing, status: todo}
+- {q: "What are spiritual gifts and how do I find mine?", rung: purpose, status: todo}
+- {q: "What does it mean to abide in Christ?", rung: abiding, status: todo}
+- {q: "Morning prayers to start your day", rung: foundations, status: todo}
+- {q: "How to read the Bible as a beginner", rung: awakening, status: todo}
+- {q: "How to stop overthinking and trust God", rung: abiding, status: todo}
+- {q: "Bible verses about God's love when you feel unworthy", rung: healing, status: todo}
+- {q: "How to grow spiritually: practical steps for every stage", rung: practice, status: todo}
+- {q: "What to do when you feel stuck spiritually", rung: practice, status: todo}
+- {q: "How to serve others when you don't know where to start", rung: purpose, status: todo}
+- {q: "Night prayers for peace and rest", rung: abiding, status: todo}
+- {q: "How to let go of resentment", rung: healing, status: todo}
+- {q: "What is meditation in Christian faith?", rung: foundations, status: todo}
+- {q: "Bible verses for hope when you're discouraged", rung: abiding, status: todo}
+- {q: "How do I know God is calling me to something?", rung: purpose, status: todo}
+- {q: "What is spiritual maturity?", rung: abiding, status: todo}
+- {q: "How to handle doubt in your faith", rung: awakening, status: todo}
+- {q: "How to keep a prayer journal", rung: foundations, status: todo}
+- {q: "How to break a bad habit with faith", rung: practice, status: todo}
+- {q: "What is the difference between religion and spirituality?", rung: awakening, status: todo}
+- {q: "Bible verses about purpose and calling", rung: purpose, status: todo}
+- {q: "How to heal from church hurt", rung: healing, status: todo}
+- {q: "How to pray when you don't know what to say", rung: foundations, status: todo}
+- {q: "What does it mean to walk by faith, not by sight?", rung: abiding, status: todo}

@@ -1,0 +1,73 @@
+:root {
+  --bg: #fbf8f2;
+  --surface: #ffffff;
+  --ink: #1f1b2e;
+  --muted: #615a72;
+  --accent: #3b2a6b;
+  --gold: #b0852f;
+  --line: #e6dfd2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14111d;
+    --surface: #1d1928;
+    --ink: #f1ecf8;
+    --muted: #b3aac4;
+    --accent: #c9b8f5;
+    --gold: #e0b866;
+    --line: #2f2940;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.7 "Inter", system-ui, sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+a { color: var(--accent); }
+h1, h2, h3, .brand, .footer-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  line-height: 1.2;
+  color: var(--ink);
+}
+h1 { font-size: 2.6rem; margin: 0.3em 0; }
+h2 { font-size: 1.8rem; margin-top: 2em; }
+h3 { font-size: 1.35rem; margin-top: 1.6em; }
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; padding-bottom: 14px; gap: 12px; flex-wrap: wrap; }
+.brand { font-size: 1.6rem; font-weight: 700; text-decoration: none; color: var(--accent); }
+.top-nav a { margin-left: 18px; text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.top-nav a:first-child { margin-left: 0; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--gold); font-weight: 600; margin: 2em 0 0; }
+.lede { font-size: 1.15rem; color: var(--muted); }
+.muted, .updated, .small { color: var(--muted); }
+.updated { font-size: 0.9rem; }
+.hero { padding: 48px 0 16px; }
+.button { display: inline-block; background: var(--accent); color: var(--bg); padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+.crumbs { font-size: 0.85rem; color: var(--muted); margin-top: 24px; }
+.crumbs a { color: var(--muted); }
+.prose blockquote { border-left: 3px solid var(--gold); margin: 1.5em 0; padding: 0.2em 1em; color: var(--muted); font-style: italic; }
+.prose .practice, .next-step { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 16px 20px; margin: 2em 0; }
+.next-step a { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.4rem; font-weight: 600; text-decoration: none; }
+.ladder { list-style: none; padding: 0; margin: 0; }
+.rung-row a { display: flex; gap: 16px; align-items: center; padding: 14px 16px; margin-bottom: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); }
+.rung-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--gold); min-width: 32px; text-align: center; }
+.cards { list-style: none; padding: 0; display: grid; gap: 12px; }
+.card a { display: block; padding: 16px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); }
+.card-rung { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 600; }
+.card-title { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; font-weight: 600; margin: 4px 0; }
+.card-desc { display: block; font-size: 0.92rem; color: var(--muted); }
+.faq h3 { font-family: "Inter", system-ui, sans-serif; font-size: 1.05rem; font-weight: 600; }
+.steps { display: flex; justify-content: space-between; gap: 12px; margin: 32px 0; flex-wrap: wrap; }
+.step { text-decoration: none; font-weight: 500; }
+.step.next { margin-left: auto; }
+.site-footer { border-top: 1px solid var(--line); margin-top: 64px; padding: 24px 0 40px; background: var(--surface); }
+.footer-title { font-size: 1.3rem; font-weight: 600; margin: 0 0 8px; }
+.rung-nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.9rem; }
+.small { font-size: 0.82rem; margin-top: 16px; }
+@media (max-width: 520px) {
+  h1 { font-size: 2rem; }
+  body { font-size: 16px; }
+}

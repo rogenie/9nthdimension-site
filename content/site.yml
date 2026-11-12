@@ -1,0 +1,11 @@
+# Site settings.
+# While the site lives at rogenie.github.io/9nthdimension-site, base_path is "/9nthdimension-site".
+# Once 9nthdimension.com points at GitHub Pages: set url to https://9nthdimension.com,
+# base_path to "", and custom_domain to 9nthdimension.com, then rebuild.
+name: 9nth Dimension
+url: https://rogenie.github.io
+base_path: /9nthdimension-site
+custom_domain: ""
+description: Practical guidance for every stage of spiritual growth, from first questions to a life of quiet peace. Find where you are on the Spiritual Ladder and take the next step.
+# Profile links for search engines (add the brand's TikTok, YouTube and Facebook URLs here).
+same_as: []
