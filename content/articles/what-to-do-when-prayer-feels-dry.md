@@ -1,9 +1,10 @@
 ---
 title: What to do when prayer feels dry
 rung: healing
+pillar: growth
 date: 2026-11-11
 updated: 2026-11-11
-description: "Dry prayer is a normal stage of spiritual growth, not proof that God is gone. Here's why it happens and five practical ways to keep praying through it."
+description: "Dry prayer is a normal stage of spiritual growth, not a sign that God is gone. Here's why it happens and five practical ways to keep praying through it."
 faq:
   - q: Does dry prayer mean God has left me?
     a: No. Seasons of dryness are a common part of spiritual growth, described by believers for centuries. Feeling distant is a feeling, not a measure of how near God actually is.

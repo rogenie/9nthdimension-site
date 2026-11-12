@@ -107,3 +107,6 @@ strong { color: var(--cream); font-weight: 600; }
   .hero { padding-top: 40px; }
   .eyebrow { letter-spacing: .2em; font-size: .72rem; }
 }
+.hero-sub { margin-top: 18px; font: 400 .85rem var(--label); letter-spacing: .08em; }
+.hero-sub a { text-decoration: none; color: var(--rose); }
+.hero-sub a:hover { color: var(--gold-hi); }

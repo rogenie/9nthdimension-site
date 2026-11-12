@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T06:39:59+00:00",
+ "generated": "2026-11-12T06:49:50+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -54,28 +54,28 @@
   }
  ],
  "backlog": {
-  "todo": 40,
+  "todo": 38,
   "skipped": 0,
   "next": [
    {
-    "q": "What are the signs of a spiritual awakening?",
+    "q": "What is the Book of Enoch and why isn't it in the Bible?",
     "rung": "awakening"
    },
    {
-    "q": "How do I start praying if I've never prayed before?",
+    "q": "Who were the Nephilim in Genesis 6?",
     "rung": "awakening"
    },
    {
-    "q": "Bible verses for when you feel far from God",
-    "rung": "healing"
+    "q": "What are the Dead Sea Scrolls and what do they tell us about the Bible?",
+    "rung": "awakening"
    },
    {
-    "q": "How to build a daily prayer habit that lasts",
+    "q": "Who decided which books are in the Bible?",
     "rung": "foundations"
    },
    {
-    "q": "How to find inner peace when life feels chaotic",
-    "rung": "abiding"
+    "q": "What is Isaiah 53 about? The suffering servant and how it's read",
+    "rung": "practice"
    }
   ]
  }

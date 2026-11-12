@@ -1,43 +1,47 @@
 # Article queue. The scheduled task takes the first entry with status: todo,
 # writes it, then sets status: published and adds the slug.
-# Add new questions anywhere; real questions from comments go near the top.
-- {q: "What are the signs of a spiritual awakening?", rung: awakening, status: todo}
-- {q: "How do I start praying if I've never prayed before?", rung: awakening, status: todo}
-- {q: "Bible verses for when you feel far from God", rung: healing, status: todo}
-- {q: "How to build a daily prayer habit that lasts", rung: foundations, status: todo}
-- {q: "How to find inner peace when life feels chaotic", rung: abiding, status: todo}
-- {q: "Bible verses for strength and courage in hard times", rung: practice, status: todo}
-- {q: "What does the Bible say about forgiveness?", rung: healing, status: todo}
-- {q: "How do I know what my purpose is?", rung: purpose, status: todo}
-- {q: "What is a gratitude practice and how do I start one?", rung: foundations, status: todo}
-- {q: "How to be still and hear God", rung: foundations, status: todo}
-- {q: "Why do I feel empty even when life is good?", rung: awakening, status: todo}
-- {q: "How to forgive someone who isn't sorry", rung: healing, status: todo}
-- {q: "What is spiritual discernment and how do I grow in it?", rung: healing, status: todo}
-- {q: "Prayers for anxiety and worry", rung: foundations, status: todo}
-- {q: "How to stay consistent in your faith when you're busy", rung: practice, status: todo}
-- {q: "What is fasting and how do I start?", rung: practice, status: todo}
-- {q: "How do I know if a thought is from God?", rung: healing, status: todo}
-- {q: "What are spiritual gifts and how do I find mine?", rung: purpose, status: todo}
-- {q: "What does it mean to abide in Christ?", rung: abiding, status: todo}
-- {q: "Morning prayers to start your day", rung: foundations, status: todo}
-- {q: "How to read the Bible as a beginner", rung: awakening, status: todo}
-- {q: "How to stop overthinking and trust God", rung: abiding, status: todo}
-- {q: "Bible verses about God's love when you feel unworthy", rung: healing, status: todo}
-- {q: "How to grow spiritually: practical steps for every stage", rung: practice, status: todo}
-- {q: "What to do when you feel stuck spiritually", rung: practice, status: todo}
-- {q: "How to serve others when you don't know where to start", rung: purpose, status: todo}
-- {q: "Night prayers for peace and rest", rung: abiding, status: todo}
-- {q: "How to let go of resentment", rung: healing, status: todo}
-- {q: "What is meditation in Christian faith?", rung: foundations, status: todo}
-- {q: "Bible verses for hope when you're discouraged", rung: abiding, status: todo}
-- {q: "How do I know God is calling me to something?", rung: purpose, status: todo}
-- {q: "What is spiritual maturity?", rung: abiding, status: todo}
-- {q: "How to handle doubt in your faith", rung: awakening, status: todo}
-- {q: "How to keep a prayer journal", rung: foundations, status: todo}
-- {q: "How to break a bad habit with faith", rung: practice, status: todo}
-- {q: "What is the difference between religion and spirituality?", rung: awakening, status: todo}
-- {q: "Bible verses about purpose and calling", rung: purpose, status: todo}
-- {q: "How to heal from church hurt", rung: healing, status: todo}
-- {q: "How to pray when you don't know what to say", rung: foundations, status: todo}
-- {q: "What does it mean to walk by faith, not by sight?", rung: abiding, status: todo}
+# Topics follow the @9nthdimension post pillars (Ancient Texts Unsealed):
+#   hidden_scripture = lost and non-canonical texts, how the canon was formed, church history, Dead Sea Scrolls
+#   prophecy         = what the text says, the history, and how believers and skeptics read it
+#   ot_mysteries     = strange, under-taught Old Testament passages and their archaeology
+#   growth           = a few practical spiritual-growth questions, kept for the Ladder
+# Each question sits on the rung of the Spiritual Ladder it serves.
+# Real questions from post comments go near the top.
+- {q: "What is the Book of Enoch and why isn't it in the Bible?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "Who were the Nephilim in Genesis 6?", pillar: ot_mysteries, rung: awakening, status: todo}
+- {q: "What are the Dead Sea Scrolls and what do they tell us about the Bible?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "Who decided which books are in the Bible?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "What is Isaiah 53 about? The suffering servant and how it's read", pillar: prophecy, rung: practice, status: todo}
+- {q: "Why do Catholic and Protestant Bibles have different books?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "Who is the Angel of the LORD in the Old Testament?", pillar: ot_mysteries, rung: abiding, status: todo}
+- {q: "What does Psalm 22 say, and why do Christians read it as a prophecy?", pillar: prophecy, rung: practice, status: todo}
+- {q: "Does Jude really quote the Book of Enoch?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "What are the lost books the Bible mentions, like the Book of Jasher?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "Who was Melchizedek?", pillar: ot_mysteries, rung: purpose, status: todo}
+- {q: "What is the Gospel of Thomas and why was it left out?", pillar: hidden_scripture, rung: healing, status: todo}
+- {q: "What is the divine council in Psalm 82?", pillar: ot_mysteries, rung: abiding, status: todo}
+- {q: "How to read Bible prophecy without falling for date-setting", pillar: prophecy, rung: healing, status: todo}
+- {q: "What is the Book of Jubilees?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "What does Micah 5:2 say about Bethlehem?", pillar: prophecy, rung: practice, status: todo}
+- {q: "What are the Urim and Thummim?", pillar: ot_mysteries, rung: practice, status: todo}
+- {q: "What are the Apocrypha, and should Christians read them?", pillar: hidden_scripture, rung: healing, status: todo}
+- {q: "What is Daniel's vision of four kingdoms?", pillar: prophecy, rung: practice, status: todo}
+- {q: "What happened with Saul and the medium at Endor?", pillar: ot_mysteries, rung: healing, status: todo}
+- {q: "What does Psalm 90 teach about God and time?", pillar: ot_mysteries, rung: abiding, status: todo}
+- {q: "What did Athanasius's Easter letter of 367 say about the Bible?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "What does Ezekiel 26 say about Tyre, and was it fulfilled?", pillar: prophecy, rung: practice, status: todo}
+- {q: "What is the Tel Dan Stele and why does it matter?", pillar: ot_mysteries, rung: awakening, status: todo}
+- {q: "How did Jerome translate the Bible, and what is the Vulgate?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "What does the Bible say about the fall of Babylon in Isaiah 13 and Jeremiah 51?", pillar: prophecy, rung: practice, status: todo}
+- {q: "What is Hezekiah's Tunnel?", pillar: ot_mysteries, rung: awakening, status: todo}
+- {q: "What is the Pilate Stone?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "Who were the 'sons of God' in Genesis 6?", pillar: ot_mysteries, rung: healing, status: todo}
+- {q: "What is the 364-day calendar of Qumran and Jubilees?", pillar: hidden_scripture, rung: practice, status: todo}
+- {q: "What is the Septuagint?", pillar: hidden_scripture, rung: foundations, status: todo}
+- {q: "Why does the Old Testament use different names for God?", pillar: ot_mysteries, rung: foundations, status: todo}
+- {q: "How to start reading the Bible deeper than Sunday school", pillar: growth, rung: awakening, status: todo}
+- {q: "How to study the Bible with historical context", pillar: growth, rung: practice, status: todo}
+- {q: "Bible verses for when you feel far from God", pillar: growth, rung: healing, status: todo}
+- {q: "How to handle doubt when you learn hard things about the Bible", pillar: growth, rung: healing, status: todo}
+- {q: "How to talk about the Bible's hard passages with a skeptic", pillar: growth, rung: purpose, status: todo}
+- {q: "How to build a daily Bible reading habit that lasts", pillar: growth, rung: foundations, status: todo}

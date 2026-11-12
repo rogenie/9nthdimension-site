@@ -213,18 +213,20 @@ class Site:
         latest = "".join(self.article_card(a) for a in self.articles[:6]) or "<li class='muted'>New articles arrive every other day.</li>"
         body = f"""
 <section class="hero">
-  <p class="eyebrow">Six stages of spiritual growth</p>
-  <h1>Climb the <em>Spiritual Ladder</em>, one rung at a time</h1>
+  <p class="eyebrow">Ancient texts unsealed</p>
+  <h1>What Sunday school <em>skipped</em></h1>
   <p class="lede">{esc(self.cfg['description'])}</p>
-  <a class="button" href="{self.href('/ladder/')}">Find your rung</a>
+  <a class="button" href="{self.href('/articles/')}">Start reading</a>
+  <p class="hero-sub"><a href="{self.href('/ladder/')}">Or find your rung on the Spiritual Ladder &rarr;</a></p>
 </section>
 <section>
-  <h2>The six rungs</h2>
-  <ol class="ladder">{ladder}</ol>
-</section>
-<section>
-  <h2>Latest articles</h2>
+  <h2>Latest unsealed</h2>
   <ul class="cards">{latest}</ul>
+</section>
+<section>
+  <h2>The Spiritual Ladder</h2>
+  <p class="muted">Six stages of growth. Every article sits on the rung it helps you climb.</p>
+  <ol class="ladder">{ladder}</ol>
 </section>"""
         site_ld = {
             "@context": "https://schema.org",
