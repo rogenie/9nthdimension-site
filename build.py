@@ -345,8 +345,36 @@ class Site:
         self.write("/articles/", self.layout(title="All articles", description="Every 9nth Dimension article, newest first.",
                    path="/articles/", body=body, jsonld=[self.org_ld()]))
 
+    def build_stats(self):
+        """articles.json: the feed the SEO dashboard on rogeniecordero.com reads."""
+        backlog_path = CONTENT / "backlog.yml"
+        backlog = yaml.safe_load(backlog_path.read_text()) if backlog_path.exists() else []
+        todo = [b for b in backlog if b.get("status") == "todo"]
+        data = {
+            "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+            "site": self.abs("/"),
+            "cadence_days": 2,
+            "rungs": [{"number": r["number"], "slug": r["slug"], "name": r["short"],
+                       "url": self.abs(self.rung_path(r))} for r in self.rungs],
+            "articles": [{
+                "title": a["title"], "slug": a["slug"], "rung": a["rung"],
+                "rung_number": self.rung_by_slug[a["rung"]]["number"],
+                "date": str(a["date"]), "updated": str(a["updated"]),
+                "url": self.abs(self.article_path(a)),
+                "words": len(re.sub(r"<[^>]+>", " ", a["body_md"]).split()),
+                "faq": len(a.get("faq") or []),
+            } for a in self.articles],
+            "backlog": {
+                "todo": len(todo),
+                "skipped": sum(1 for b in backlog if b.get("status") == "skip"),
+                "next": [{"q": b["q"], "rung": b["rung"]} for b in todo[:5]],
+            },
+        }
+        (OUT / "articles.json").write_text(json.dumps(data, indent=1, ensure_ascii=False))
+
     def build_files(self):
-        robots = "\n\n".join(f"User-agent: {b}\nAllow: /" for b in AI_AND_SEARCH_BOTS)
+        self.build_stats()
+        robots ="\n\n".join(f"User-agent: {b}\nAllow: /" for b in AI_AND_SEARCH_BOTS)
         robots += f"\n\nUser-agent: *\nAllow: /\n\nSitemap: {self.abs('/sitemap.xml')}\n"
         (OUT / "robots.txt").write_text(robots)
 

@@ -1,0 +1,82 @@
+{
+ "generated": "2026-11-12T06:13:06+00:00",
+ "site": "https://9nthdimension.com/",
+ "cadence_days": 2,
+ "rungs": [
+  {
+   "number": 1,
+   "slug": "awakening",
+   "name": "Awakening",
+   "url": "https://9nthdimension.com/ladder/awakening/"
+  },
+  {
+   "number": 2,
+   "slug": "foundations",
+   "name": "Foundations",
+   "url": "https://9nthdimension.com/ladder/foundations/"
+  },
+  {
+   "number": 3,
+   "slug": "practice",
+   "name": "Practice",
+   "url": "https://9nthdimension.com/ladder/practice/"
+  },
+  {
+   "number": 4,
+   "slug": "healing",
+   "name": "Healing",
+   "url": "https://9nthdimension.com/ladder/healing/"
+  },
+  {
+   "number": 5,
+   "slug": "purpose",
+   "name": "Purpose",
+   "url": "https://9nthdimension.com/ladder/purpose/"
+  },
+  {
+   "number": 6,
+   "slug": "abiding",
+   "name": "Abiding",
+   "url": "https://9nthdimension.com/ladder/abiding/"
+  }
+ ],
+ "articles": [
+  {
+   "title": "What to do when prayer feels dry",
+   "slug": "what-to-do-when-prayer-feels-dry",
+   "rung": "healing",
+   "rung_number": 4,
+   "date": "2026-11-11",
+   "updated": "2026-11-11",
+   "url": "https://9nthdimension.com/ladder/healing/what-to-do-when-prayer-feels-dry/",
+   "words": 411,
+   "faq": 4
+  }
+ ],
+ "backlog": {
+  "todo": 40,
+  "skipped": 0,
+  "next": [
+   {
+    "q": "What are the signs of a spiritual awakening?",
+    "rung": "awakening"
+   },
+   {
+    "q": "How do I start praying if I've never prayed before?",
+    "rung": "awakening"
+   },
+   {
+    "q": "Bible verses for when you feel far from God",
+    "rung": "healing"
+   },
+   {
+    "q": "How to build a daily prayer habit that lasts",
+    "rung": "foundations"
+   },
+   {
+    "q": "How to find inner peace when life feels chaotic",
+    "rung": "abiding"
+   }
+  ]
+ }
+}
