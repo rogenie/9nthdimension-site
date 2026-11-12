@@ -56,3 +56,5 @@ If the flatness has spread everywhere, with low mood most days, trouble sleeping
 ## What dryness is preparing you for
 
 People who keep praying through dry seasons often describe a quieter, steadier faith on the other side, one that does not rise and fall with their mood. That steadiness is the mark of Rung 5 and Rung 6. Dryness is not the ladder breaking; it is often the next rung appearing.
+
+If you are in a dry season right now, you do not need to fix it today. Pray one honest line, read one psalm, and come back tomorrow. Faithfulness in small things is how every rung is climbed.
