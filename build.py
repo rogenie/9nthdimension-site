@@ -23,6 +23,11 @@ CONTENT = ROOT / "content"
 OUT = ROOT / "docs"
 STATIC = ROOT / "static"
 
+SEAL_SVG = ('<svg class="seal" viewBox="0 0 64 64" aria-hidden="true">'
+            '<circle cx="32" cy="32" r="29" fill="#6e1214" stroke="#b5925b" stroke-width="3"/>'
+            '<circle cx="32" cy="32" r="22" fill="none" stroke="#b5925b" stroke-width="1"/>'
+            '<path d="M32 21v22M21 32h22" stroke="#b5925b" stroke-width="3" stroke-linecap="round"/></svg>')
+
 AI_AND_SEARCH_BOTS = [
     "Googlebot", "Bingbot", "GPTBot", "OAI-SearchBot", "ChatGPT-User",
     "PerplexityBot", "Perplexity-User", "ClaudeBot", "Claude-SearchBot",
@@ -121,18 +126,20 @@ class Site:
 <meta property="og:url" content="{self.abs(path)}">
 <meta property="og:site_name" content="{esc(name)}">
 <meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#140b0a">
 {modified}
 <link rel="alternate" type="application/rss+xml" title="{esc(name)}" href="{self.href('/feed.xml')}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{self.href('/style.css')}">
+<link rel="icon" href="{self.href('/seal.svg')}" type="image/svg+xml">
 {ld}
 </head>
 <body>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="{self.href('/')}">9nth Dimension</a>
+    <a class="brand" href="{self.href('/')}" aria-label="9nth Dimension home">{SEAL_SVG}<span class="brand-words"><span class="wordmark">9NTHDIMENSION</span><span class="tagline">ANCIENT TEXTS UNSEALED</span></span></a>
     <nav class="top-nav"><a href="{self.href('/ladder/')}">The Ladder</a><a href="{self.href('/articles/')}">Articles</a><a href="{self.href('/about/')}">About</a></nav>
   </div>
 </header>
@@ -206,8 +213,8 @@ class Site:
         latest = "".join(self.article_card(a) for a in self.articles[:6]) or "<li class='muted'>New articles arrive every other day.</li>"
         body = f"""
 <section class="hero">
-  <p class="eyebrow">9nth Dimension</p>
-  <h1>Climb the Spiritual Ladder, one rung at a time</h1>
+  <p class="eyebrow">Six stages of spiritual growth</p>
+  <h1>Climb the <em>Spiritual Ladder</em>, one rung at a time</h1>
   <p class="lede">{esc(self.cfg['description'])}</p>
   <a class="button" href="{self.href('/ladder/')}">Find your rung</a>
 </section>
@@ -405,6 +412,7 @@ class Site:
         if self.cfg.get("custom_domain"):
             (OUT / "CNAME").write_text(self.cfg["custom_domain"] + "\n")
         shutil.copy(STATIC / "style.css", OUT / "style.css")
+        (OUT / "seal.svg").write_text(SEAL_SVG.replace(' class="seal"', ' xmlns="http://www.w3.org/2000/svg"'))
         notfound = self.layout(title="Page not found", description="This page does not exist.", path="/404.html",
                                body=f'<h1>Page not found</h1><p><a href="{self.href("/ladder/")}">Start at the Spiritual Ladder</a>.</p>',
                                jsonld=[])
