@@ -13,3 +13,9 @@ socials:
   - {name: TikTok, url: "https://www.tiktok.com/@9nthdimension"}
   - {name: YouTube, url: "https://www.youtube.com/channel/UCpPybTYxCFYDLs8522Y6ZXw"}
   - {name: Facebook, url: "https://www.facebook.com/1079782558559640"}
+# Analytics, read by the SEO dashboard at rogeniecordero.com/9nthdimension/seo.
+# search_console_verification: the content="..." value from Search Console's "HTML tag" verification method.
+# ga4_measurement_id: the "G-..." Measurement ID of the site's Google Analytics 4 web stream.
+# Leave either blank to leave it off the pages. Rebuild after changing.
+search_console_verification: ""
+ga4_measurement_id: ""

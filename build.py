@@ -117,6 +117,20 @@ class Site:
     def article_path(self, a):
         return f"/ladder/{a['rung']}/{a['slug']}/"
 
+    # ---------- analytics ----------
+    def tracking_tags(self):
+        """Google Search Console verification and Google Analytics 4, each only when set in site.yml."""
+        out = []
+        ver = str(self.cfg.get("search_console_verification") or "").strip()
+        if ver:
+            out.append(f'<meta name="google-site-verification" content="{esc(ver)}">')
+        ga = str(self.cfg.get("ga4_measurement_id") or "").strip()
+        if ga:
+            out.append(f'<script async src="https://www.googletagmanager.com/gtag/js?id={esc(ga)}"></script>\n'
+                       f'<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}'
+                       f'gtag("js",new Date());gtag("config",{json.dumps(ga)});</script>')
+        return "".join(t + "\n" for t in out)
+
     # ---------- layout ----------
     def layout(self, *, title, description, path, body, jsonld, kind="website", updated=None):
         name = self.cfg["name"]
@@ -152,7 +166,7 @@ class Site:
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{self.href('/style.css')}">
 <link rel="icon" href="{self.href('/seal.svg')}" type="image/svg+xml">
-{ld}
+{self.tracking_tags()}{ld}
 </head>
 <body>
 <header class="site-header">
