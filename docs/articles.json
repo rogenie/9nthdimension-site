@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T07:02:58+00:00",
+ "generated": "2026-11-13T13:39:01+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -41,6 +41,17 @@
   }
  ],
  "articles": [
+  {
+   "title": "What is the Book of Enoch and why isn't it in the Bible?",
+   "slug": "what-is-the-book-of-enoch",
+   "rung": "awakening",
+   "rung_number": 1,
+   "date": "2026-11-13",
+   "updated": "2026-11-13",
+   "url": "https://9nthdimension.com/ladder/awakening/what-is-the-book-of-enoch/",
+   "words": 1089,
+   "faq": 4
+  },
   {
    "title": "What to do when prayer feels dry",
    "slug": "what-to-do-when-prayer-feels-dry",

@@ -7,7 +7,7 @@
 #   growth           = a few practical spiritual-growth questions, kept for the Ladder
 # Each question sits on the rung of the Spiritual Ladder it serves.
 # Real questions from post comments go near the top.
-- {q: "What is the Book of Enoch and why isn't it in the Bible?", pillar: hidden_scripture, rung: awakening, status: todo}
+- {q: "What is the Book of Enoch and why isn't it in the Bible?", pillar: hidden_scripture, rung: awakening, status: published, slug: what-is-the-book-of-enoch}
 - {q: "Who were the Nephilim in Genesis 6?", pillar: ot_mysteries, rung: awakening, status: todo}
 - {q: "What are the Dead Sea Scrolls and what do they tell us about the Bible?", pillar: hidden_scripture, rung: awakening, status: todo}
 - {q: "Who decided which books are in the Bible?", pillar: hidden_scripture, rung: foundations, status: todo}
