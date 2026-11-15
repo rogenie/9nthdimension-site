@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T13:39:01+00:00",
+ "generated": "2026-11-15T13:39:02+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -42,6 +42,17 @@
  ],
  "articles": [
   {
+   "title": "Who were the Nephilim in Genesis 6?",
+   "slug": "who-were-the-nephilim",
+   "rung": "awakening",
+   "rung_number": 1,
+   "date": "2026-11-15",
+   "updated": "2026-11-15",
+   "url": "https://9nthdimension.com/ladder/awakening/who-were-the-nephilim/",
+   "words": 1175,
+   "faq": 5
+  },
+  {
    "title": "What is the Book of Enoch and why isn't it in the Bible?",
    "slug": "what-is-the-book-of-enoch",
    "rung": "awakening",
@@ -65,13 +76,9 @@
   }
  ],
  "backlog": {
-  "todo": 38,
+  "todo": 37,
   "skipped": 0,
   "next": [
-   {
-    "q": "What is the Book of Enoch and why isn't it in the Bible?",
-    "rung": "awakening"
-   },
    {
     "q": "Who were the Nephilim in Genesis 6?",
     "rung": "awakening"
@@ -87,6 +94,10 @@
    {
     "q": "What is Isaiah 53 about? The suffering servant and how it's read",
     "rung": "practice"
+   },
+   {
+    "q": "Why do Catholic and Protestant Bibles have different books?",
+    "rung": "foundations"
    }
   ]
  }
