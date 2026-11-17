@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T13:39:02+00:00",
+ "generated": "2026-11-17T13:39:56+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -42,6 +42,17 @@
  ],
  "articles": [
   {
+   "title": "What are the Dead Sea Scrolls and what do they tell us about the Bible?",
+   "slug": "what-are-the-dead-sea-scrolls",
+   "rung": "awakening",
+   "rung_number": 1,
+   "date": "2026-11-17",
+   "updated": "2026-11-17",
+   "url": "https://9nthdimension.com/ladder/awakening/what-are-the-dead-sea-scrolls/",
+   "words": 1198,
+   "faq": 5
+  },
+  {
    "title": "Who were the Nephilim in Genesis 6?",
    "slug": "who-were-the-nephilim",
    "rung": "awakening",
@@ -76,13 +87,9 @@
   }
  ],
  "backlog": {
-  "todo": 37,
+  "todo": 36,
   "skipped": 0,
   "next": [
-   {
-    "q": "Who were the Nephilim in Genesis 6?",
-    "rung": "awakening"
-   },
    {
     "q": "What are the Dead Sea Scrolls and what do they tell us about the Bible?",
     "rung": "awakening"
@@ -98,6 +105,10 @@
    {
     "q": "Why do Catholic and Protestant Bibles have different books?",
     "rung": "foundations"
+   },
+   {
+    "q": "Who is the Angel of the LORD in the Old Testament?",
+    "rung": "abiding"
    }
   ]
  }
