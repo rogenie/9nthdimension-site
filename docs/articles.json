@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T13:39:56+00:00",
+ "generated": "2026-11-21T22:03:38+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -41,6 +41,17 @@
   }
  ],
  "articles": [
+  {
+   "title": "Who decided which books are in the Bible?",
+   "slug": "who-decided-which-books-are-in-the-bible",
+   "rung": "foundations",
+   "rung_number": 2,
+   "date": "2026-11-21",
+   "updated": "2026-11-21",
+   "url": "https://9nthdimension.com/ladder/foundations/who-decided-which-books-are-in-the-bible/",
+   "words": 1056,
+   "faq": 4
+  },
   {
    "title": "What are the Dead Sea Scrolls and what do they tell us about the Bible?",
    "slug": "what-are-the-dead-sea-scrolls",
@@ -87,13 +98,9 @@
   }
  ],
  "backlog": {
-  "todo": 36,
+  "todo": 35,
   "skipped": 0,
   "next": [
-   {
-    "q": "What are the Dead Sea Scrolls and what do they tell us about the Bible?",
-    "rung": "awakening"
-   },
    {
     "q": "Who decided which books are in the Bible?",
     "rung": "foundations"
@@ -109,6 +116,10 @@
    {
     "q": "Who is the Angel of the LORD in the Old Testament?",
     "rung": "abiding"
+   },
+   {
+    "q": "What does Psalm 22 say, and why do Christians read it as a prophecy?",
+    "rung": "practice"
    }
   ]
  }
