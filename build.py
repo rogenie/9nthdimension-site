@@ -129,6 +129,9 @@ class Site:
             out.append(f'<script async src="https://www.googletagmanager.com/gtag/js?id={esc(ga)}"></script>\n'
                        f'<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}'
                        f'gtag("js",new Date());gtag("config",{json.dumps(ga)});</script>')
+        gc = str(self.cfg.get("goatcounter") or "").strip()
+        if gc:
+            out.append(f'<script data-goatcounter="https://{esc(gc)}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>')
         return "".join(t + "\n" for t in out)
 
     # ---------- layout ----------

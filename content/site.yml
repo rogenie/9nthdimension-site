@@ -19,3 +19,5 @@ socials:
 # Leave either blank to leave it off the pages. Rebuild after changing.
 search_console_verification: ""
 ga4_measurement_id: ""
+# goatcounter: the GoatCounter site code (the part before .goatcounter.com). Privacy-friendly visit counts.
+goatcounter: "9nthdimension"

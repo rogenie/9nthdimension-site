@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T22:03:38+00:00",
+ "generated": "2026-11-23T01:03:58+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -98,13 +98,9 @@
   }
  ],
  "backlog": {
-  "todo": 35,
+  "todo": 34,
   "skipped": 0,
   "next": [
-   {
-    "q": "Who decided which books are in the Bible?",
-    "rung": "foundations"
-   },
    {
     "q": "What is Isaiah 53 about? The suffering servant and how it's read",
     "rung": "practice"
@@ -120,6 +116,10 @@
    {
     "q": "What does Psalm 22 say, and why do Christians read it as a prophecy?",
     "rung": "practice"
+   },
+   {
+    "q": "Does Jude really quote the Book of Enoch?",
+    "rung": "awakening"
    }
   ]
  }
