@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T01:06:07+00:00",
+ "generated": "2026-11-25T13:39:26+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -41,6 +41,17 @@
   }
  ],
  "articles": [
+  {
+   "title": "Why do Catholic and Protestant Bibles have different books?",
+   "slug": "why-catholic-and-protestant-bibles-differ",
+   "rung": "foundations",
+   "rung_number": 2,
+   "date": "2026-11-25",
+   "updated": "2026-11-25",
+   "url": "https://9nthdimension.com/ladder/foundations/why-catholic-and-protestant-bibles-differ/",
+   "words": 1165,
+   "faq": 4
+  },
   {
    "title": "What is Isaiah 53 about? The suffering servant and how it's read",
    "slug": "what-is-isaiah-53-about",
@@ -109,13 +120,9 @@
   }
  ],
  "backlog": {
-  "todo": 33,
+  "todo": 32,
   "skipped": 0,
   "next": [
-   {
-    "q": "Why do Catholic and Protestant Bibles have different books?",
-    "rung": "foundations"
-   },
    {
     "q": "Who is the Angel of the LORD in the Old Testament?",
     "rung": "abiding"
@@ -131,6 +138,10 @@
    {
     "q": "What are the lost books the Bible mentions, like the Book of Jasher?",
     "rung": "awakening"
+   },
+   {
+    "q": "Who was Melchizedek?",
+    "rung": "purpose"
    }
   ]
  }
