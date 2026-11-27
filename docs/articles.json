@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T13:39:26+00:00",
+ "generated": "2026-11-27T13:39:46+00:00",
  "site": "https://9nthdimension.com/",
  "cadence_days": 2,
  "rungs": [
@@ -41,6 +41,17 @@
   }
  ],
  "articles": [
+  {
+   "title": "Who is the Angel of the LORD in the Old Testament?",
+   "slug": "who-is-the-angel-of-the-lord",
+   "rung": "abiding",
+   "rung_number": 6,
+   "date": "2026-11-27",
+   "updated": "2026-11-27",
+   "url": "https://9nthdimension.com/ladder/abiding/who-is-the-angel-of-the-lord/",
+   "words": 1106,
+   "faq": 4
+  },
   {
    "title": "Why do Catholic and Protestant Bibles have different books?",
    "slug": "why-catholic-and-protestant-bibles-differ",
@@ -120,13 +131,9 @@
   }
  ],
  "backlog": {
-  "todo": 32,
+  "todo": 31,
   "skipped": 0,
   "next": [
-   {
-    "q": "Who is the Angel of the LORD in the Old Testament?",
-    "rung": "abiding"
-   },
    {
     "q": "What does Psalm 22 say, and why do Christians read it as a prophecy?",
     "rung": "practice"
@@ -142,6 +149,10 @@
    {
     "q": "Who was Melchizedek?",
     "rung": "purpose"
+   },
+   {
+    "q": "What is the Gospel of Thomas and why was it left out?",
+    "rung": "healing"
    }
   ]
  }

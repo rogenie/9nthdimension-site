@@ -13,7 +13,7 @@
 - {q: "Who decided which books are in the Bible?", pillar: hidden_scripture, rung: foundations, status: published, slug: who-decided-which-books-are-in-the-bible}
 - {q: "What is Isaiah 53 about? The suffering servant and how it's read", pillar: prophecy, rung: practice, status: published, slug: what-is-isaiah-53-about}
 - {q: "Why do Catholic and Protestant Bibles have different books?", pillar: hidden_scripture, rung: foundations, status: published, slug: why-catholic-and-protestant-bibles-differ}
-- {q: "Who is the Angel of the LORD in the Old Testament?", pillar: ot_mysteries, rung: abiding, status: todo}
+- {q: "Who is the Angel of the LORD in the Old Testament?", pillar: ot_mysteries, rung: abiding, status: published, slug: who-is-the-angel-of-the-lord}
 - {q: "What does Psalm 22 say, and why do Christians read it as a prophecy?", pillar: prophecy, rung: practice, status: todo}
 - {q: "Does Jude really quote the Book of Enoch?", pillar: hidden_scripture, rung: awakening, status: todo}
 - {q: "What are the lost books the Bible mentions, like the Book of Jasher?", pillar: hidden_scripture, rung: awakening, status: todo}
