@@ -4,7 +4,7 @@ rung: abiding
 pillar: ot_mysteries
 date: 2026-11-27
 updated: 2026-11-27
-description: "The Angel of the LORD is a messenger who speaks as God himself in the Old Testament. Some read him as Christ before Bethlehem; others as God's fully authorized envoy."
+description: "The Angel of the LORD is an Old Testament messenger who speaks as God himself. Some read him as Christ before Bethlehem; others as God's fully authorized envoy."
 faq:
   - q: Is the Angel of the LORD the same as Gabriel or Michael?
     a: "The Old Testament never says so. Michael and Gabriel are named only in Daniel among the Old Testament books, and neither is identified with the Angel of the LORD. In Luke 1 the messenger called \"an angel of the Lord\" turns out to be Gabriel, but that is a New Testament scene with different language."
